@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.PersonDetailsPage"
+             Title="Informacje"
+             BackgroundColor="White">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="20" Spacing="10">
+        
+        <Label Text="Informacje o osobie" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+        <Label Text="ID" FontSize="18" FontAttributes="Bold"/>
+        <Label Text="{Binding ID}" FontSize="18"/>
+
+        <Label Text="Imię" FontSize="18" FontAttributes="Bold"/>
+        <Label Text="{Binding Name}" FontSize="18"/>
+
+        <Label Text="Nazwisko" FontSize="18" FontAttributes="Bold"/>
+        <Label Text="{Binding Surname}" FontSize="18"/>
+
+        <Label Text="Numer telefonu" FontSize="18" FontAttributes="Bold"/>
+        <Label Text="{Binding PhoneNumber}" FontSize="18"/>
+
+        <Label Text="Email" FontSize="18" FontAttributes="Bold"/>
+        <Label Text="{Binding Email}" FontSize="18"/>
+
+        <Label Text="Adres" FontSize="18" FontAttributes="Bold"/>
+        <Label Text="{Binding Adress}" FontSize="18"/>
+
+        <Button Text="Powrót" FontSize="18" BackgroundColor="LightGreen" Clicked="OnBackButtonClicked" />
+    </StackLayout>
+</ContentPage>
